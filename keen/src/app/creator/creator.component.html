@@ -1,0 +1,45 @@
+<div class="lu-create-card">
+  <div class="lu-input-create">  
+    <md-card>
+      <md-card-content>
+      <form class="example-form">
+        <md-input-container class="lu-text-field lu-full-width">
+          <input mdInput  [(ngModel)]="note.title" #message name="title" maxlength="256" placeholder="Create New Note" (focus)="focusFunction()">
+          <md-hint align="end">{{message.value.length}} / 256</md-hint>
+        </md-input-container>
+        <div class="lu-create-hidden-items" [ngStyle]="{ 'display': hiddenContent ? 'block' : 'none'}">
+          <h4>Content</h4>
+          <md-input-container class="lu-textarea-field lu-full-width">
+            <textarea mdInput [(ngModel)]="note.content" name="content" placeholder="Tell me some Details"></textarea>
+          </md-input-container>
+          <md-slide-toggle (click)="hiddenColorSelector()">Color</md-slide-toggle>
+          <div class="" [ngStyle]="{ 'display': colorSelector ? 'block' : 'none'}">
+            <h4>Choose One Color</h4>
+            <br/>
+            <md-radio-group  class="lu-radio-group" [(ngModel)]="note.color" name="color">
+              <md-radio-button value="#8BC34A" class="lu-radio-item"><div class="lu-color-area" style="background-color:#8BC34A"></div></md-radio-button>
+              <md-radio-button value="#80D8FF" class="lu-radio-item"><div class="lu-color-area" style="background-color:#80D8FF"></div></md-radio-button>
+              <md-radio-button value="#F44336" class="lu-radio-item"><div class="lu-color-area" style="background-color:#F44336"></div></md-radio-button>
+              <md-radio-button value="#FF9800" class="lu-radio-item"><div class="lu-color-area" style="background-color:#FF9800"></div></md-radio-button>
+            </md-radio-group>
+          </div>
+        </div>
+      </form>
+      </md-card-content>
+      <md-card-actions>
+        <div class="row lu-btn-actions" [ngStyle]="{ 'display': hiddenContent ? 'block' : 'none'}">
+          <div class="lu-actions col-md-6">
+          </div>
+          <div class="lu-submit col-md-6">
+            <button type="submit" md-raised-button class="pull-right lu-add-btn" (click)="addNote()">Submit</button>
+            <button type="submit" md-raised-button class="pull-right lu-cancel-btn" (click)="closeNotePad()">Cancel</button>
+          </div>
+        </div>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div class="lu-creator-notifications">
+    <div class="warning" >
+      </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="lu-list">
+  <div class="lu-label">
+    <h3>
+      <span><i class="material-icons">note</i></span>
+      Notes
+    </h3>
+  </div>
+  <div *ngIf="notes <= 0 ">
+    <h4 class="lu-no-notes">You Don't Have any Notes Yet<br><small>Create One</small> </h4>
+  </div>
+  <md-card *ngFor="let note of notes; let i = index " class="lu-card">
+    <md-card-title>{{ note.title }}</md-card-title>
+    <div md-card-image [ngStyle]="{ 'background-color': note.color}" class="lu-card-top"></div>
+    <md-card-content>{{ note.content }}</md-card-content>
+    <md-card-actions>
+      <div class="row">
+        <div class="pull-right lu-card-actions">
+          <button md-icon-button (click)="popsEdit(note.id)"><i class="material-icons">mode_edit</i></button>
+          <button md-icon-button (click)="popsDel(note.id,note.title)"><i class="material-icons">delete</i></button>      
+        </div>
+     </div>
+    </md-card-actions>
+    </md-card>
+</div>

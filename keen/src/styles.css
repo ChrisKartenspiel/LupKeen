@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    background-color: #ECEFF1;
+    padding: 0;
+    margin: 0;
+}
+
+.brand-left {
+    display: inline-flex;
+    padding-right: 16px;
+}
+
+.brand-left .lu-brand-icon {
+    padding-top: 6px;
+    padding-right: 8px;
+    color: #e0ebf3;
+}
+
+.brand-left .li-brand-name {
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.lu-searcher {
+    padding-right: 25px;
+}
+
+.lu-searcher input {
+    background-color: transparent;
+    border: 1px solid #e0ebf3;
+    border-radius: 6px;
+    padding: 2px 6px 2px 27px;
+    font-size: 14px;
+    font-weight: normal;
+    min-width: 200px;
+}
+.lu-searcher .material-icons {
+    position: relative;
+    top: 5px;
+    right: -28px;
+    font-size: 16px;
+}
+.lu-searcher input:focus {
+    background-color: #7191a0;
+}
+
+.lu-main-container {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.lu-label h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #46555d;
+    margin-bottom: 20px;
+}
+.lu-label h3 .material-icons {
+    font-size: 14px;
+    padding-right: 4px;
+}
+
+.lu-list .lu-card {
+    margin-bottom: 15px;
+}
+
+.lu-full-width {
+    width: 100%;
+}
+
+.lu-textarea-field textarea {
+    resize: vertical;
+    width: 100%;
+    padding: 2px;
+}
+
+.lu-card-top {
+    height: 3px;
+}
+
+.lu-add-btn {
+    background-color: #558B2F !important;
+    color: white !important;
+}
+
+.lu-radio-group .lu-radio-item {
+    width: 23%;
+}
+
+.lu-radio-group {
+    width: 100%;
+    display: block;
+}
+.lu-color-area {
+    min-width: 100px;
+    height: 35px;
+    display: block;
+}
+
+.lu-card-actions {
+    padding-right: 22px;
+}
+
+.lu-no-notes {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px 0px;
+    border-radius: 3px;
+    background-color: #f3f3f3;    
+}

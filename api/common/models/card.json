@@ -1,0 +1,36 @@
+{
+  "name": "Card",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number"
+    },
+    "hasFiles": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "mixins": {
+    "TimeStamp" : true
+  },  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,12 @@
+{
+  "lupkeen": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "lupkeen",
+    "password": "",
+    "name": "lupkeen",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
